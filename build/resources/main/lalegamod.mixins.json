@@ -1,0 +1,17 @@
+{
+    "required": true,
+    "package": "net.la.lega.mod.mixin",
+    "compatibilityLevel": "JAVA_8",
+    "mixins": [
+        "VillagerEntityMixin",
+        "FarmerVillagerTaskMixin",
+        "PointOfInterestTypeAccessor",
+        "VillagerProfessionAccessor",
+        "HopperBlockEntityAccessor"
+    ],
+    "client": [
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

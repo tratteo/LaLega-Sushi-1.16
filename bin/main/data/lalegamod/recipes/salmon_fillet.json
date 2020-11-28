@@ -1,0 +1,10 @@
+{
+    "type": "lalegamod:injective_processing",
+    "input" : 
+    {
+      "item": "minecraft:salmon"
+    },
+    "output": "lalegamod:salmon_fillet",
+    "processingTime": 140,
+    "outputAmount": 2
+}

@@ -1,0 +1,46 @@
+{
+  "mappings": {
+    "net/la/lega/mod/mixin/FarmerVillagerTaskMixin": {
+      "keepRunning": "Lnet/minecraft/class_4217;method_19565(Lnet/minecraft/class_3218;Lnet/minecraft/class_1646;J)V"
+    },
+    "net/la/lega/mod/mixin/PointOfInterestTypeAccessor": {
+      "setup": "method_20354(Lnet/minecraft/class_4158;)Lnet/minecraft/class_4158;",
+      "\u003cinit\u003e": "\u003cinit\u003e"
+    },
+    "net/la/lega/mod/mixin/VillagerEntityMixin": {
+      "canGather": "Lnet/minecraft/class_1646;method_20820(Lnet/minecraft/class_1799;)Z",
+      "hasSeedToPlant": "Lnet/minecraft/class_1646;method_19623()Z"
+    },
+    "net/la/lega/mod/mixin/HopperBlockEntityAccessor": {
+      "lastTickTime": "field_12022:J",
+      "setCooldown": "method_11238(I)V",
+      "isDisabled": "method_11242()Z"
+    },
+    "net/la/lega/mod/mixin/VillagerProfessionAccessor": {
+      "\u003cinit\u003e": "\u003cinit\u003e"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "net/la/lega/mod/mixin/FarmerVillagerTaskMixin": {
+        "keepRunning": "Lnet/minecraft/class_4217;method_19565(Lnet/minecraft/class_3218;Lnet/minecraft/class_1646;J)V"
+      },
+      "net/la/lega/mod/mixin/PointOfInterestTypeAccessor": {
+        "setup": "method_20354(Lnet/minecraft/class_4158;)Lnet/minecraft/class_4158;",
+        "\u003cinit\u003e": "\u003cinit\u003e"
+      },
+      "net/la/lega/mod/mixin/VillagerEntityMixin": {
+        "canGather": "Lnet/minecraft/class_1646;method_20820(Lnet/minecraft/class_1799;)Z",
+        "hasSeedToPlant": "Lnet/minecraft/class_1646;method_19623()Z"
+      },
+      "net/la/lega/mod/mixin/HopperBlockEntityAccessor": {
+        "lastTickTime": "field_12022:J",
+        "setCooldown": "method_11238(I)V",
+        "isDisabled": "method_11242()Z"
+      },
+      "net/la/lega/mod/mixin/VillagerProfessionAccessor": {
+        "\u003cinit\u003e": "\u003cinit\u003e"
+      }
+    }
+  }
+}

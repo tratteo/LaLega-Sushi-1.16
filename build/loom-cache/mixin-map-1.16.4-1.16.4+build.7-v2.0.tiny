@@ -1,0 +1,8 @@
+v1	named	intermediary
+FIELD	net/la/lega/mod/mixin/FarmerVillagerTaskMixin	Lnet/minecraft/util/math/BlockPos;	currentTarget	field_18858
+FIELD	net/la/lega/mod/mixin/FarmerVillagerTaskMixin	Ljava/util/List;	targetPositions	field_19351
+FIELD	net/la/lega/mod/mixin/FarmerVillagerTaskMixin	J	nextResponseTime	field_18861
+FIELD	net/la/lega/mod/mixin/FarmerVillagerTaskMixin	I	ticksRan	field_19239
+FIELD	net/la/lega/mod/mixin/VillagerEntityMixin	Ljava/util/Set;	GATHERABLE_ITEMS	field_18527
+METHOD	net/la/lega/mod/mixin/FarmerVillagerTaskMixin	(Lnet/minecraft/server/world/ServerWorld;)Lnet/minecraft/util/math/BlockPos;	chooseRandomTarget	method_20641
+METHOD	net/la/lega/mod/mixin/VillagerEntityMixin	()Lnet/minecraft/village/VillagerData;	getVillagerData	method_7231

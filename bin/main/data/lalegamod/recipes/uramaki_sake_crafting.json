@@ -1,0 +1,18 @@
+{
+    "type": "lalegamod:sushi_crafting",
+    "ingredients":
+    [
+        {
+            "item": "lalegamod:rice"
+        },
+        {
+            "item": "lalegamod:sashimi_sake"
+        },
+        {
+            "item": "lalegamod:avocado"
+        }
+    ],
+    "output": "lalegamod:uramaki_sake",
+    "processingTime": 400,
+    "outputAmount": 1
+}

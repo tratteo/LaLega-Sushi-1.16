@@ -1,0 +1,18 @@
+{
+    "block.lalegamod.launcher_block": "Launcher Block",
+    "block.lalegamod.powered_launcher_block": "Powered Launcher Block",
+    "block.lalegamod.extreme_launcher_block": "Extreme Launcher Block",
+    "block.lalegamod.blast_chiller": "Blast Chiller",
+    "item.lalegamod.sashimi_sake": "Sashimi Sake",
+    "item.lalegamod.rice": "Rice",
+    "item.lalegamod.salmon_fillet": "Salmon Fillet",
+    "block.lalegamod.thread_cutter": "Thread Cutter",
+    "item.lalegamod.nigiri_sake": "Nigiri Sake",
+    "item.lalegamod.hosomaki_sake": "Hosomaki Sake",
+    "block.lalegamod.sushi_crafter": "Sushi Crafter",
+    "block.lalegamod.rice_block": "Rice Seeds",
+    "block.lalegamod.avocado_block": "Avocado Seed",
+    "item.lalegamod.avocado": "Avocado",
+    "item.lalegamod.uramaki_sake": "Uramaki Sake",
+    "entity.minecraft.villager.sushi_man": "Sushi Man"
+}

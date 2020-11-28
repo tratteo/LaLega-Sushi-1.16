@@ -1,0 +1,25 @@
+{
+    "blast_chiller_hum":
+    {
+        "sounds":
+        [
+            "lalegamod:blast_chiller_hum"
+        ]
+    },
+    
+    "thread_cutter_cut":
+    {
+        "sounds":
+        [
+            "lalegamod:thread_cutter_cut"
+        ]
+    },
+
+    "avocado_harvest":
+    {
+        "sounds":
+        [
+            "lalegamod:avocado_harvest"
+        ]
+    }
+}

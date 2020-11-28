@@ -1,0 +1,134 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 28/11/20 16.02
+Description: Ticking entity
+
+java.lang.IllegalArgumentException: Cannot get property EnumProperty{name=oil_type, clazz=class net.la.lega.mod.model_enum.OilType, values=[NONE, SUNFLOWER_OIL, RICE_OIL]} as it does not exist in Block{minecraft:air}
+	at net.minecraft.state.State.get(State.java:95)
+	at net.la.lega.mod.entity.FryerBlockEntity.getOilType(FryerBlockEntity.java:309)
+	at net.la.lega.mod.entity.FryerBlockEntity$1.get(FryerBlockEntity.java:55)
+	at net.minecraft.screen.Property$1.get(Property.java:8)
+	at net.minecraft.screen.Property.hasChanged(Property.java:55)
+	at net.minecraft.screen.ScreenHandler.sendContentUpdates(ScreenHandler.java:140)
+	at net.minecraft.server.network.ServerPlayerEntity.tick(ServerPlayerEntity.java:385)
+	at net.minecraft.server.world.ServerWorld.tickEntity(ServerWorld.java:621)
+	at net.minecraft.world.World.tickEntity(World.java:561)
+	at net.minecraft.server.world.ServerWorld.tick(ServerWorld.java:411)
+	at net.minecraft.server.MinecraftServer.tickWorlds(MinecraftServer.java:871)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:811)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:91)
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:670)
+	at net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:257)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.state.State.get(State.java:95)
+	at net.la.lega.mod.entity.FryerBlockEntity.getOilType(FryerBlockEntity.java:309)
+	at net.la.lega.mod.entity.FryerBlockEntity$1.get(FryerBlockEntity.java:55)
+	at net.minecraft.screen.Property$1.get(Property.java:8)
+	at net.minecraft.screen.Property.hasChanged(Property.java:55)
+	at net.minecraft.screen.ScreenHandler.sendContentUpdates(ScreenHandler.java:140)
+	at net.minecraft.server.network.ServerPlayerEntity.tick(ServerPlayerEntity.java:385)
+	at net.minecraft.server.world.ServerWorld.tickEntity(ServerWorld.java:621)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.server.network.ServerPlayerEntity)
+	Entity ID: 206
+	Entity Name: Player183
+	Entity's Exact location: -82.00, 63.00, -192.11
+	Entity's Block location: World: (-82,63,-193), Chunk: (at 14,3,15 in -6,-13; contains blocks -96,0,-208 to -81,255,-193), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.tickEntity(World.java:561)
+	at net.minecraft.server.world.ServerWorld.tick(ServerWorld.java:411)
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayerEntity['Player183'/206, l='ServerLevel[Test]', x=-82.00, y=63.00, z=-192.11]]
+	Chunk stats: ServerChunkCache: 2209
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-80,64,-198), Chunk: (at 0,4,10 in -5,-13; contains blocks -80,0,-208 to -65,255,-193), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Level time: 2102 game time, 2102 day time
+	Level name: Test
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 50282 (now: false), thunder time: 22275 (now: false)
+	Known server brands: fabric
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.tickWorlds(MinecraftServer.java:871)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:811)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:91)
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:670)
+	at net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:257)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.4
+	Minecraft Version ID: 1.16.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 474529000 bytes (452 MB) / 1796734976 bytes (1713 MB) up to 3806855168 bytes (3630 MB)
+	CPUs: 24
+	JVM Flags: 0 total; 
+	Fabric Mods: 
+		fabric: Fabric API 0.26.3+1.16
+		fabric-api-base: Fabric API Base 0.2.0+9f0fb4b895
+		fabric-biome-api-v1: Fabric Biome API (v1) 3.1.0+2e23b97c3a
+		fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.4+6a2618f53a
+		fabric-command-api-v1: Fabric Command API (v1) 1.0.9+6a2618f53a
+		fabric-commands-v0: Fabric Commands (v0) 0.2.0+52d3083695
+		fabric-containers-v0: Fabric Containers (v0) 0.1.8+045df74f95
+		fabric-content-registries-v0: Fabric Content Registries (v0) 0.1.9+059ea86695
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.1.2+b7f9825d95
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.4.1+6a2618f53a
+		fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.0+16acbe5b95
+		fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.3+a4467d2a3a
+		fabric-item-api-v1: Fabric Item API (v1) 1.2.0+6a2618f53a
+		fabric-item-groups-v0: Fabric Item Groups (v0) 0.2.1+6a2618f53a
+		fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.1+730711c695
+		fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.0+6a2618f53a
+		fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 1.2.0+74cc3b2095
+		fabric-loot-tables-v1: Fabric Loot Tables (v1) 1.0.1+432ea18895
+		fabric-mining-levels-v0: Fabric Mining Levels (v0) 0.1.2+6a2618f53a
+		fabric-models-v0: Fabric Models (v0) 0.1.1+6a2618f53a
+		fabric-networking-blockentity-v0: Fabric Networking Block Entity (v0) 0.2.5+6a2618f53a
+		fabric-networking-v0: Fabric Networking (v0) 0.1.10+6a2618f53a
+		fabric-object-builder-api-v1: Fabric Object Builder API (v1) 1.9.2+6a2618f53a
+		fabric-object-builders-v0: Fabric Object Builders (v0) 0.7.1+6a2618f53a
+		fabric-particles-v1: fabric-particles-v1 0.2.2+6a2618f53a
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 0.7.1+285766753a
+		fabric-renderer-api-v1: Fabric Renderer API (v1) 0.3.3+6a2618f53a
+		fabric-renderer-indigo: Fabric Renderer - Indigo 0.4.3+6a2618f53a
+		fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 2.2.0+6a2618f53a
+		fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.1.4+6a2618f53a
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 0.1.12+6a2618f53a
+		fabric-rendering-v0: Fabric Rendering (v0) 1.1.1+6a2618f53a
+		fabric-rendering-v1: Fabric Rendering (v1) 1.4.0+6a2618f53a
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.3.2+1944f3e03a
+		fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.1.0+8724984195
+		fabric-structure-api-v1: Fabric Structure API (v1) 1.1.1+f1d8af063a
+		fabric-tag-extensions-v0: Fabric Tag Extensions (v0) 1.0.3+6a2618f53a
+		fabric-textures-v0: Fabric Textures (v0) 1.0.5+6a2618f53a
+		fabric-tool-attribute-api-v1: Fabric Tool Attribute API (v1) 1.2.5+6a2618f53a
+		fabricloader: Fabric Loader 0.10.8
+		jankson: Jankson 3.0.1+j1.2.0
+		lalegamod: LaLega Sushi 4.1.1
+		libgui: LibGui 3.2.2+1.16.3
+		minecraft: Minecraft 1.16.4
+	Player Count: 1 / 8; [ServerPlayerEntity['Player183'/206, l='ServerLevel[Test]', x=-82.00, y=63.00, z=-192.11]]
+	Data Packs: vanilla, fabric/fabric-tool-attribute-api-v1, fabric/lalegamod
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fabric'

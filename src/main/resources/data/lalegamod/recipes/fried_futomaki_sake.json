@@ -1,0 +1,9 @@
+{
+    "type": "lalegamod:frying",
+    "input": {
+        "item": "lalegamod:futomaki_sake"
+    },
+    "output": "lalegamod:fried_futomaki_sake",
+    "processingTime": 285,
+    "outputAmount": 1
+}

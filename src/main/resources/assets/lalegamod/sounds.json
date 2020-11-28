@@ -1,0 +1,37 @@
+{
+    "blast_chiller_hum": {
+        "sounds": [
+            "lalegamod:blast_chiller_hum"
+        ]
+    },
+    "thread_cutter_cut": {
+        "sounds": [
+            "lalegamod:thread_cutter_cut"
+        ]
+    },
+    "avocado_harvest": {
+        "sounds": [
+            "lalegamod:avocado_harvest"
+        ]
+    },
+    "fryer_on": {
+        "sounds": [
+            "lalegamod:fryer_on"
+        ]
+    },
+    "steam_cooker_pressure": {
+        "sounds": [
+            "lalegamod:steam_cooker_pressure"
+        ]
+    },
+    "press_activate": {
+        "sounds": [
+            "lalegamod:press_activate"
+        ]
+    },
+    "sushi_man_knife_sharpen": {
+        "sounds": [
+            "lalegamod:sushi_man_knife_sharpen"
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "type": "lalegamod:injective_processing",
+    "input" : 
+    {
+      "item": "lalegamod:salmon_fillet"
+    },
+    "output": "lalegamod:sashimi_sake",
+    "processingTime": 220,
+    "outputAmount": 1
+}

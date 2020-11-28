@@ -1,0 +1,9 @@
+{
+    "type": "lalegamod:blast_chilling",
+    "input": {
+        "item": "lalegamod:salmon_fillet"
+    },
+    "output": "lalegamod:sashimi_sake",
+    "processingTime": 185,
+    "outputAmount": 1
+}

@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "iBi",
+        "iSi",
+        "III"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:cobblestone"
+        },
+        "B": {
+            "item": "minecraft:bow"
+        },
+        "S": {
+            "item": "minecraft:stonecutter"
+        },
+        "I": {
+            "item": "minecraft:stone"
+        }
+    },
+    "result": {
+        "item": "lalegamod:thread_cutter",
+        "count": 1
+    }
+}

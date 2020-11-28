@@ -1,0 +1,9 @@
+{
+    "type": "lalegamod:frying",
+    "input": {
+        "item": "lalegamod:pufferfish_fillet"
+    },
+    "output": "lalegamod:torafugu_karaage",
+    "processingTime": 615,
+    "outputAmount": 1
+}

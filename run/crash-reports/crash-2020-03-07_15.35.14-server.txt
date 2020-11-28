@@ -1,0 +1,198 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 07/03/20 15.35
+Description: Ticking memory connection
+
+org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: An unexpected critical error was encountered
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:364)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:191)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:178)
+	at org.spongepowered.asm.mixin.transformer.FabricMixinTransformerProxy.transformClassBytes(FabricMixinTransformerProxy.java:23)
+	at net.fabricmc.loader.launch.knot.KnotClassDelegate.loadClassData(KnotClassDelegate.java:174)
+	at net.fabricmc.loader.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:143)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at net.minecraft.entity.ai.brain.task.VillagerTaskListProvider.createWorkTasks(VillagerTaskListProvider.java:22)
+	at net.minecraft.entity.passive.VillagerEntity.initBrain(VillagerEntity.java:145)
+	at net.minecraft.entity.passive.VillagerEntity.deserializeBrain(VillagerEntity.java:126)
+	at net.minecraft.entity.LivingEntity.<init>(LivingEntity.java:208)
+	at net.minecraft.entity.mob.MobEntity.<init>(MobEntity.java:105)
+	at net.minecraft.entity.mob.MobEntityWithAi.<init>(MobEntityWithAi.java:16)
+	at net.minecraft.entity.passive.PassiveEntity.<init>(PassiveEntity.java:28)
+	at net.minecraft.entity.passive.AbstractTraderEntity.<init>(AbstractTraderEntity.java:47)
+	at net.minecraft.entity.passive.VillagerEntity.<init>(VillagerEntity.java:111)
+	at net.minecraft.entity.passive.VillagerEntity.<init>(VillagerEntity.java:107)
+	at net.minecraft.entity.EntityType.create(EntityType.java:397)
+	at net.minecraft.entity.EntityType.method_17846(EntityType.java:407)
+	at java.util.Optional.map(Optional.java:215)
+	at net.minecraft.entity.EntityType.getEntityFromTag(EntityType.java:407)
+	at net.minecraft.entity.EntityType.loadEntityFromTag(EntityType.java:455)
+	at net.minecraft.entity.EntityType.loadEntityWithPassengers(EntityType.java:437)
+	at net.minecraft.world.ChunkSerializer.writeEntities(ChunkSerializer.java:397)
+	at net.minecraft.world.ChunkSerializer.method_12388(ChunkSerializer.java:141)
+	at net.minecraft.world.chunk.WorldChunk.loadToWorld(WorldChunk.java:467)
+	at net.minecraft.server.world.ThreadedAnvilChunkStorage.method_17227(ThreadedAnvilChunkStorage.java:580)
+	at com.mojang.datafixers.util.Either.lambda$mapLeft$0(Either.java:162)
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38)
+	at com.mojang.datafixers.util.Either.mapLeft(Either.java:162)
+	at net.minecraft.server.world.ThreadedAnvilChunkStorage.method_20460(ThreadedAnvilChunkStorage.java:567)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:442)
+	at net.minecraft.server.world.ChunkTaskPrioritySystem.method_17634(ChunkTaskPrioritySystem.java:43)
+	at net.minecraft.util.thread.ThreadExecutor.executeTask(ThreadExecutor.java:136)
+	at net.minecraft.server.world.ServerChunkManager$MainThreadExecutor.executeTask(ServerChunkManager.java:508)
+	at net.minecraft.util.thread.ThreadExecutor.runTask(ThreadExecutor.java:109)
+	at net.minecraft.server.world.ServerChunkManager$MainThreadExecutor.runTask(ServerChunkManager.java:516)
+	at net.minecraft.util.thread.ThreadExecutor.runTasks(ThreadExecutor.java:119)
+	at net.minecraft.server.world.ServerChunkManager.getChunk(ServerChunkManager.java:130)
+	at net.minecraft.world.World.getChunk(World.java:146)
+	at net.minecraft.server.world.ServerWorld.addPlayer(ServerWorld.java:893)
+	at net.minecraft.server.world.ServerWorld.onPlayerConnected(ServerWorld.java:876)
+	at net.minecraft.server.PlayerManager.onPlayerConnect(PlayerManager.java:167)
+	at net.minecraft.server.network.ServerLoginNetworkHandler.acceptPlayer(ServerLoginNetworkHandler.java:112)
+	at net.minecraft.server.network.ServerLoginNetworkHandler.tick(ServerLoginNetworkHandler.java:59)
+	at net.minecraft.network.ClientConnection.tick(ClientConnection.java:216)
+	at net.minecraft.server.ServerNetworkIo.tick(ServerNetworkIo.java:148)
+	at net.minecraft.server.MinecraftServer.tickWorlds(MinecraftServer.java:845)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:792)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:114)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:651)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [lalegamod.mixins.json:FarmerVillagerTaskMixin] from phase [DEFAULT] in config [lalegamod.mixins.json] FAILED during APPLY
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:643)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinApplyError(MixinProcessor.java:595)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:356)
+	... 53 more
+Caused by: org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionException: Invalid descriptor on lalegamod.mixins.json:FarmerVillagerTaskMixin->@Inject::keepRunning(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/passive/VillagerEntity;JLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V! Expected (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/passive/VillagerEntity;JLorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V but found (Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/passive/VillagerEntity;JLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V [INJECT Applicator Phase -> lalegamod.mixins.json:FarmerVillagerTaskMixin -> Apply Injections ->  -> Inject -> lalegamod.mixins.json:FarmerVillagerTaskMixin->@Inject::keepRunning(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/passive/VillagerEntity;JLorg/spongepowered/asm/mixin/injection/callback/CallbackInfoReturnable;)V]
+	at org.spongepowered.asm.mixin.injection.callback.CallbackInjector.inject(CallbackInjector.java:507)
+	at org.spongepowered.asm.mixin.injection.callback.CallbackInjector.inject(CallbackInjector.java:437)
+	at org.spongepowered.asm.mixin.injection.code.Injector.inject(Injector.java:264)
+	at org.spongepowered.asm.mixin.injection.struct.InjectionInfo.inject(InjectionInfo.java:377)
+	at org.spongepowered.asm.mixin.transformer.MixinTargetContext.applyInjections(MixinTargetContext.java:1273)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyInjections(MixinApplicatorStandard.java:1042)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.applyMixin(MixinApplicatorStandard.java:395)
+	at org.spongepowered.asm.mixin.transformer.MixinApplicatorStandard.apply(MixinApplicatorStandard.java:320)
+	at org.spongepowered.asm.mixin.transformer.TargetClassContext.applyMixins(TargetClassContext.java:345)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:570)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:351)
+	... 53 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:364)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:191)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:178)
+	at org.spongepowered.asm.mixin.transformer.FabricMixinTransformerProxy.transformClassBytes(FabricMixinTransformerProxy.java:23)
+	at net.fabricmc.loader.launch.knot.KnotClassDelegate.loadClassData(KnotClassDelegate.java:174)
+	at net.fabricmc.loader.launch.knot.KnotClassLoader.loadClass(KnotClassLoader.java:143)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at net.minecraft.entity.ai.brain.task.VillagerTaskListProvider.createWorkTasks(VillagerTaskListProvider.java:22)
+	at net.minecraft.entity.passive.VillagerEntity.initBrain(VillagerEntity.java:145)
+	at net.minecraft.entity.passive.VillagerEntity.deserializeBrain(VillagerEntity.java:126)
+	at net.minecraft.entity.LivingEntity.<init>(LivingEntity.java:208)
+	at net.minecraft.entity.mob.MobEntity.<init>(MobEntity.java:105)
+	at net.minecraft.entity.mob.MobEntityWithAi.<init>(MobEntityWithAi.java:16)
+	at net.minecraft.entity.passive.PassiveEntity.<init>(PassiveEntity.java:28)
+	at net.minecraft.entity.passive.AbstractTraderEntity.<init>(AbstractTraderEntity.java:47)
+	at net.minecraft.entity.passive.VillagerEntity.<init>(VillagerEntity.java:111)
+	at net.minecraft.entity.passive.VillagerEntity.<init>(VillagerEntity.java:107)
+	at net.minecraft.entity.EntityType.create(EntityType.java:397)
+	at net.minecraft.entity.EntityType.method_17846(EntityType.java:407)
+	at java.util.Optional.map(Optional.java:215)
+	at net.minecraft.entity.EntityType.getEntityFromTag(EntityType.java:407)
+	at net.minecraft.entity.EntityType.loadEntityFromTag(EntityType.java:455)
+	at net.minecraft.entity.EntityType.loadEntityWithPassengers(EntityType.java:437)
+	at net.minecraft.world.ChunkSerializer.writeEntities(ChunkSerializer.java:397)
+	at net.minecraft.world.ChunkSerializer.method_12388(ChunkSerializer.java:141)
+	at net.minecraft.world.chunk.WorldChunk.loadToWorld(WorldChunk.java:467)
+	at net.minecraft.server.world.ThreadedAnvilChunkStorage.method_17227(ThreadedAnvilChunkStorage.java:580)
+	at com.mojang.datafixers.util.Either.lambda$mapLeft$0(Either.java:162)
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38)
+	at com.mojang.datafixers.util.Either.mapLeft(Either.java:162)
+	at net.minecraft.server.world.ThreadedAnvilChunkStorage.method_20460(ThreadedAnvilChunkStorage.java:567)
+	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:602)
+	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:442)
+	at net.minecraft.server.world.ChunkTaskPrioritySystem.method_17634(ChunkTaskPrioritySystem.java:43)
+	at net.minecraft.util.thread.ThreadExecutor.executeTask(ThreadExecutor.java:136)
+	at net.minecraft.server.world.ServerChunkManager$MainThreadExecutor.executeTask(ServerChunkManager.java:508)
+	at net.minecraft.util.thread.ThreadExecutor.runTask(ThreadExecutor.java:109)
+	at net.minecraft.server.world.ServerChunkManager$MainThreadExecutor.runTask(ServerChunkManager.java:516)
+	at net.minecraft.util.thread.ThreadExecutor.runTasks(ThreadExecutor.java:119)
+	at net.minecraft.server.world.ServerChunkManager.getChunk(ServerChunkManager.java:130)
+	at net.minecraft.world.World.getChunk(World.java:146)
+	at net.minecraft.server.world.ServerWorld.addPlayer(ServerWorld.java:893)
+	at net.minecraft.server.world.ServerWorld.onPlayerConnected(ServerWorld.java:876)
+	at net.minecraft.server.PlayerManager.onPlayerConnect(PlayerManager.java:167)
+	at net.minecraft.server.network.ServerLoginNetworkHandler.acceptPlayer(ServerLoginNetworkHandler.java:112)
+	at net.minecraft.server.network.ServerLoginNetworkHandler.tick(ServerLoginNetworkHandler.java:59)
+	at net.minecraft.network.ClientConnection.tick(ClientConnection.java:216)
+
+-- Ticking connection --
+Details:
+	Connection: net.minecraft.network.ClientConnection@28998c2a
+Stacktrace:
+	at net.minecraft.server.ServerNetworkIo.tick(ServerNetworkIo.java:148)
+	at net.minecraft.server.MinecraftServer.tickWorlds(MinecraftServer.java:845)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:792)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:114)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:651)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.15.2
+	Minecraft Version ID: 1.15.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 460539288 bytes (439 MB) / 1844445184 bytes (1759 MB) up to 3799515136 bytes (3623 MB)
+	CPUs: 4
+	JVM Flags: 3 total; -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=localhost:51088,server=n,suspend=y
+	Fabric Mods: 
+		fabric: Fabric API 0.4.29+build.290-1.15
+		fabric-api-base: Fabric API Base 0.1.2+b7f9825d0c
+		fabric-biomes-v1: Fabric Biomes (v1) 0.1.5+3b05f68e0c
+		fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.4+c6a8ea890c
+		fabric-commands-v0: Fabric Commands (v0) 0.1.2+b7f9825d0c
+		fabric-containers-v0: Fabric Containers (v0) 0.1.3+b7f9825d0c
+		fabric-content-registries-v0: Fabric Content Registries (v0) 0.1.3+b7f9825d0c
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.1.2+b7f9825d0c
+		fabric-dimensions-v1: fabric-dimensions-v1 0.2.4+203491ea0c
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.2.7+a1bd31180c
+		fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.1.2+b7f9825d0c
+		fabric-item-groups-v0: Fabric Item Groups (v0) 0.1.6+ec40b2e10c
+		fabric-keybindings-v0: Fabric Key Bindings (v0) 0.1.1+dfdb52d60c
+		fabric-loot-tables-v1: Fabric Loot Tables (v1) 0.1.5+e08a73050c
+		fabric-mining-levels-v0: Fabric Mining Levels (v0) 0.1.1+b7f9825d0c
+		fabric-models-v0: Fabric Models (v0) 0.1.0+dfdb52d60c
+		fabric-networking-blockentity-v0: Fabric Networking Block Entity (v0) 0.2.3+e08a73050c
+		fabric-networking-v0: Fabric Networking (v0) 0.1.7+12515ed90c
+		fabric-object-builders-v0: Fabric Object Builders (v0) 0.1.3+e4c9a9c30c
+		fabric-particles-v1: fabric-particles-v1 0.1.1+dfdb52d60c
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 0.2.6+f3d8141b0c
+		fabric-renderer-api-v1: Fabric Renderer API (v1) 0.2.9+aea78a250c
+		fabric-renderer-indigo: Fabric Renderer - Indigo 0.2.22+203491ea0c
+		fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 2.0.1+5a0f9a600c
+		fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.1.3+b7f9825d0c
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 0.1.6+12515ed90c
+		fabric-rendering-v0: Fabric Rendering (v0) 1.1.0+534104900c
+		fabric-rendering-v1: Fabric Rendering (v1) 0.1.0+534104900c
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.1.10+06c939b30c
+		fabric-tag-extensions-v0: Fabric Tag Extensions (v0) 0.1.3+abd915800c
+		fabric-textures-v0: Fabric Textures (v0) 1.0.4+821cdba70c
+		fabricloader: Fabric Loader 0.7.6+build.180
+		jankson: Jankson 2.0.1+j1.2.0
+		lalegamod: La Lega Mod ${version}
+		libgui: LibGui 1.5.1
+		minecraft: Minecraft 1.15.2
+	Player Count: 1 / 8; [ServerPlayerEntity['Player782'/9, l='New World', x=-671.65, y=66.00, z=119.02]]
+	Data Packs: vanilla, fabric/fabric-mining-levels-v0 (incompatible), fabric/lalegamod (incompatible)
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fabric'

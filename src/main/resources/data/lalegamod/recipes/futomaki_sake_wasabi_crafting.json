@@ -1,0 +1,23 @@
+{
+    "type": "lalegamod:sushi_crafting",
+    "ingredients": [
+        {
+            "item": "lalegamod:rice"
+        },
+        {
+            "item": "lalegamod:sashimi_sake"
+        },
+        {
+            "item": "minecraft:dried_kelp"
+        },
+        {
+            "item": "lalegamod:avocado"
+        },
+        {
+            "item": "lalegamod:wasabi"
+        }
+    ],
+    "output": "lalegamod:futomaki_sake_wasabi",
+    "processingTime": 665,
+    "outputAmount": 1
+}

@@ -1,0 +1,7 @@
+{
+    "parent": "lalegamod:template/narrow_crop",
+    "textures": 
+    {
+        "crop": "lalegamod:crop/avocado_stage3"
+    }
+}

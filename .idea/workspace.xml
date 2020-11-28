@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="04aa6eac-acac-497f-b598-120055dcd5a9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/LaLegaSushi-1.16" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/net/la/lega/mod/entity/BlastChillerBlockEntity.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/net/la/lega/mod/entity/QuadrhopperBlockEntity.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="1X4sYscRjhs4aZW2FNWc7GAFYR9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="JavaMethodFindUsagesOptions.isSearchForTextOccurrences" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LaLegaSushi-1.15" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="net.la.lega.mod.recipe.serializer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Matteo\Documents\Projects\Mods\LaLegaSushi\src\main\resources\data\lalegamod\recipes" />
+      <recent name="C:\Users\Matteo\Docs\Projects\Mods\LaLegaSushi\src\main\resources\data\lalegamod\recipes" />
+      <recent name="C:\Users\Matteo\Docs\Projects\Mods\LaLegaSushi\src\main\resources\assets\lalegamod\models\item" />
+      <recent name="C:\Users\Matteo\Docs\Projects\Mods\LaLegaSushi\src\main\resources\assets\lalegamod\models\block" />
+      <recent name="C:\Users\Matteo\Docs\Projects\Mods\LaLegaSushi\src\main\resources\data\lalegamod\loot_tables\blocks" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.la.lega.mod.entity.abstraction" />
+      <recent name="net.la.lega.mod.api" />
+      <recent name="net.la.lega.mod.gui.screen" />
+      <recent name="net.la.lega.mod.gui.controller" />
+      <recent name="net.la.lega.mod.villager.trade_offers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Matteo\Documents\Projects\Mods\LaLegaSushi\src\main\resources\assets\lalegamod\sounds" />
+      <recent name="C:\Users\Matteo\Documents\Projects\Mods\LaLegaSushi\src\main\resources\assets\lalegamod\textures\block\press" />
+      <recent name="C:\Users\Matteo\Docs\Projects\Mods\LaLegaSushi\src\main\resources\assets\lalegamod\sounds" />
+      <recent name="C:\Users\Matteo\Docs\Projects\Mods\LaLegaSushi\src\main\resources\assets\lalegamod" />
+      <recent name="C:\Users\Matteo\Docs\Projects\Mods\LaLegaSushi\src\main\resources\assets\lalegamod\textures" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Minecraft Client">
+    <list>
+      <item itemvalue="Application.Minecraft Client" />
+      <item itemvalue="Application.Minecraft Server" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04aa6eac-acac-497f-b598-120055dcd5a9" name="Default Changelist" comment="" />
+      <created>1580316752121</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580316752121</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="732" y="347" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606575503387">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="732" y="347" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1606575503387" />
+    <state x="1039" y="339" key="#com.intellij.ide.util.MemberChooser" timestamp="1606585120095">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1039" y="339" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1606585120095" />
+    <state x="958" y="424" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606585215466">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="958" y="424" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1606585215466" />
+    <state x="1150" y="365" key="FileChooserDialogImpl" timestamp="1606584329103">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1150" y="365" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1606584329103" />
+    <state width="2505" height="71" key="GridCell.Tab.0.bottom" timestamp="1606585797551">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2505" height="71" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1606585797551" />
+    <state width="2505" height="71" key="GridCell.Tab.0.center" timestamp="1606585797551">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2505" height="71" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1606585797551" />
+    <state width="2505" height="71" key="GridCell.Tab.0.left" timestamp="1606585797551">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2505" height="71" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1606585797551" />
+    <state width="2505" height="71" key="GridCell.Tab.0.right" timestamp="1606585797551">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2505" height="71" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1606585797551" />
+    <state x="673" y="259" key="SettingsEditor" timestamp="1606584264018">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="673" y="259" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1606584264018" />
+  </component>
+</project>
