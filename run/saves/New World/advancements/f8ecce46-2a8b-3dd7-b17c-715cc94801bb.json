@@ -1,0 +1,21 @@
+{
+  "minecraft:recipes/redstone/redstone": {
+    "criteria": {
+      "has_redstone_block": "2020-12-04 00:36:40 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/brewing/cauldron": {
+    "criteria": {
+      "has_water_bucket": "2020-12-04 00:36:49 +0100"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:jungle": "2020-12-04 00:36:40 +0100"
+    },
+    "done": false
+  },
+  "DataVersion": 2584
+}

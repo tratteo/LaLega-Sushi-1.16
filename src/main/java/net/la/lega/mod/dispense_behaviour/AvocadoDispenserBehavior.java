@@ -3,7 +3,7 @@ package net.la.lega.mod.dispense_behaviour;
 import net.la.lega.mod.block.AvocadoBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DispenserBlock;
-import net.minecraft.block.dispenser.ItemDispenserBehavior;
+import net.minecraft.block.dispenser.ShearsDispenserBehavior;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPointer;
@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class AvocadoDispenserBehavior extends ItemDispenserBehavior
+public class AvocadoDispenserBehavior extends ShearsDispenserBehavior
 {
     @Override
     protected ItemStack dispenseSilently(BlockPointer blockPointer, ItemStack stack)

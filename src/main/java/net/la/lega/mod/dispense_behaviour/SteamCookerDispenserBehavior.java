@@ -5,8 +5,11 @@ import net.la.lega.mod.entity.SteamCookerBlockEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DispenserBlock;
 import net.minecraft.block.dispenser.ItemDispenserBehavior;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.BucketItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPointer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -36,7 +39,18 @@ public class SteamCookerDispenserBehavior extends ItemDispenserBehavior
         }
         else
         {
-            return super.dispenseSilently(blockPointer, stack);
+            BucketItem bucketItem = (BucketItem) stack.getItem();
+            blockPos = blockPointer.getBlockPos().offset((Direction) blockPointer.getBlockState().get(DispenserBlock.FACING));
+            world = blockPointer.getWorld();
+            if(bucketItem.placeFluid((PlayerEntity) null, world, blockPos, (BlockHitResult) null))
+            {
+                bucketItem.onEmptied(world, stack, blockPos);
+                return new ItemStack(Items.BUCKET);
+            }
+            else
+            {
+                return this.dispense(blockPointer, stack);
+            }
         }
     }
 }
