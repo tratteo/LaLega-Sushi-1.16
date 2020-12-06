@@ -5,7 +5,6 @@ import net.la.lega.mod.initializer.LItems;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.MerchantEntity;
 import net.minecraft.entity.passive.VillagerEntity;
-import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -34,8 +33,7 @@ public abstract class VillagerEntityMixin extends MerchantEntity
     @Inject(at = @At("HEAD"), method = "hasSeedToPlant", cancellable = true)
     private void hasSeedToPlant(CallbackInfoReturnable<Boolean> info)
     {
-        SimpleInventory basicInventory = this.getInventory();
-        info.setReturnValue(basicInventory.containsAny(ImmutableSet.of(Items.WHEAT_SEEDS, Items.POTATO, Items.CARROT, Items.BEETROOT_SEEDS, LItems.RICE_SEEDS, LItems.WASABI_ROOT)));
+        info.setReturnValue(this.getInventory().containsAny(ImmutableSet.of(Items.WHEAT_SEEDS, Items.POTATO, Items.CARROT, Items.BEETROOT_SEEDS, LItems.RICE_SEEDS, LItems.WASABI_ROOT)));
         info.cancel();
     }
     

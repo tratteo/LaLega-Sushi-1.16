@@ -84,18 +84,18 @@ public class WasabiBlock extends CropBlock
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos)
     {
-        Block block = world.getBlockState(pos.down()).getBlock();
-        if((block == Blocks.GRASS_BLOCK || block == Blocks.DIRT || block == Blocks.PODZOL || block == Blocks.FARMLAND) && (world.getBlockState(pos.up()).getBlock() == Blocks.AIR))
+        BlockState blockState = world.getBlockState(pos.down());
+        if (blockState.isOf(Blocks.GRASS_BLOCK) || blockState.isOf(Blocks.DIRT) || blockState.isOf(Blocks.FARMLAND) || blockState.isOf(Blocks.PODZOL))
         {
             BlockPos blockPos = pos.down();
-            Iterator<Direction> horizontalIterator = Direction.Type.HORIZONTAL.iterator();
-            
-            while(horizontalIterator.hasNext())
+            Iterator var6 = Direction.Type.HORIZONTAL.iterator();
+        
+            while(var6.hasNext())
             {
-                Direction direction = (Direction) horizontalIterator.next();
-                BlockState blockState = world.getBlockState(blockPos.offset(direction));
+                Direction direction = (Direction)var6.next();
+                BlockState blockState2 = world.getBlockState(blockPos.offset(direction));
                 FluidState fluidState = world.getFluidState(blockPos.offset(direction));
-                if(fluidState.isIn(FluidTags.WATER) || blockState.getBlock() == Blocks.FROSTED_ICE)
+                if (fluidState.isIn(FluidTags.WATER) || blockState2.isOf(Blocks.FROSTED_ICE))
                 {
                     return true;
                 }
