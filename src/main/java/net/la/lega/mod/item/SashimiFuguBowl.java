@@ -19,7 +19,7 @@ public class SashimiFuguBowl extends Item
     public static final Identifier ID = new Identifier(LLoader.MOD_ID, "sashimi_fugu_bowl");
     
     public static final StatusEffect speedEffect = StatusEffects.NIGHT_VISION;
-    public static final int speedEffectDuration = 20 * 50;
+    public static final int speedEffectDuration = 20 * 60;
     public static final float speedEffectChance = 0.75F;
     
     public static final StatusEffect luckEffect = StatusEffects.LUCK;

@@ -1,7 +1,7 @@
 package net.la.lega.mod.gui.screen;
 
 import io.github.cottonmc.cotton.gui.client.CottonInventoryScreen;
-import net.la.lega.mod.gui.controller.BlastChillerBlockGUIHandler;
+import net.la.lega.mod.gui.handler.BlastChillerBlockGUIHandler;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.Text;
 

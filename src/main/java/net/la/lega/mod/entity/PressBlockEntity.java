@@ -4,7 +4,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.la.lega.mod.entity.abstraction.AProcessingEntity;
-import net.la.lega.mod.gui.controller.PressBlockGUIHandler;
+import net.la.lega.mod.gui.handler.PressBlockGUIHandler;
 import net.la.lega.mod.initializer.LEntities;
 import net.la.lega.mod.initializer.LSounds;
 import net.la.lega.mod.recipe.PressingRecipe;

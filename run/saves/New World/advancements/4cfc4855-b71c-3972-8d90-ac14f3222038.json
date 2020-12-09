@@ -61,19 +61,20 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:jungle": "2020-12-04 00:44:16 +0100"
+      "minecraft:jungle": "2020-12-04 00:44:16 +0100",
+      "minecraft:plains": "2020-12-08 20:11:08 +0100"
     },
     "done": false
-  },
-  "minecraft:recipes/building_blocks/red_stained_glass": {
-    "criteria": {
-      "has_glass": "2020-12-04 00:45:38 +0100"
-    },
-    "done": true
   },
   "minecraft:recipes/redstone/redstone": {
     "criteria": {
       "has_redstone_block": "2020-12-04 00:44:16 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/red_stained_glass": {
+    "criteria": {
+      "has_glass": "2020-12-04 00:45:38 +0100"
     },
     "done": true
   },

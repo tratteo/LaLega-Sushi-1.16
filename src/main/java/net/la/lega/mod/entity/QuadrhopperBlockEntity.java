@@ -4,7 +4,7 @@ import blue.endless.jankson.annotation.Nullable;
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.la.lega.mod.block.QuadrhopperBlock;
 import net.la.lega.mod.entity.abstraction.AInventoryEntity;
-import net.la.lega.mod.gui.controller.QuadrhopperBlockGUIHandler;
+import net.la.lega.mod.gui.handler.QuadrhopperBlockGUIHandler;
 import net.la.lega.mod.initializer.LEntities;
 import net.la.lega.mod.mixin.HopperBlockEntityAccessor;
 import net.minecraft.block.Block;

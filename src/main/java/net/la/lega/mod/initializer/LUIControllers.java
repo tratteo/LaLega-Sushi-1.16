@@ -2,7 +2,7 @@ package net.la.lega.mod.initializer;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.la.lega.mod.block.*;
-import net.la.lega.mod.gui.controller.*;
+import net.la.lega.mod.gui.handler.*;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.ScreenHandlerType;
 

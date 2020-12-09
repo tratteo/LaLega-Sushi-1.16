@@ -15,8 +15,8 @@ public class Gyoza extends Item
     
     public static final StatusEffect effect = StatusEffects.REGENERATION;
     public static final int effectDuration = 20 * 8;
-    public static final float effectChance = 0.245F;
-    public static final float saturation = 3.85F;
+    public static final float effectChance = 0.3F;
+    public static final float saturation = 3.9F;
     public static final int hunger = 6;
     
     public Gyoza()
@@ -26,7 +26,6 @@ public class Gyoza extends Item
                     .hunger(hunger)
                     .statusEffect(new StatusEffectInstance(effect, effectDuration), effectChance)
                     .saturationModifier(saturation)
-                    .snack()
                     .build())
              );
     }

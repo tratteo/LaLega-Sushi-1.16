@@ -2,7 +2,7 @@ package net.la.lega.mod.entity;
 
 import net.fabricmc.fabric.api.screenhandler.v1.ExtendedScreenHandlerFactory;
 import net.la.lega.mod.entity.abstraction.AProcessingEntity;
-import net.la.lega.mod.gui.controller.SushiCrafterBlockGUIHandler;
+import net.la.lega.mod.gui.handler.SushiCrafterBlockGUIHandler;
 import net.la.lega.mod.initializer.LEntities;
 import net.la.lega.mod.initializer.LItems;
 import net.la.lega.mod.initializer.LTags;

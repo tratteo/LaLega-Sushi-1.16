@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "R"
+    ],
+    "key": {
+        "#": {
+            "item": "lalegamod:cooked_squid"
+        },
+        "R": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "lalegamod:squid_skewer",
+        "count": 1
+    }
+}

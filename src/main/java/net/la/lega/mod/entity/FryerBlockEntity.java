@@ -6,7 +6,7 @@ import net.la.lega.mod.api.LimitedQueue;
 import net.la.lega.mod.api.ProcessableRecipeObject;
 import net.la.lega.mod.block.FryerBlock;
 import net.la.lega.mod.entity.abstraction.ASidedInventoryEntity;
-import net.la.lega.mod.gui.controller.FryerBlockGUIHandler;
+import net.la.lega.mod.gui.handler.FryerBlockGUIHandler;
 import net.la.lega.mod.initializer.LEntities;
 import net.la.lega.mod.model_enum.OilType;
 import net.la.lega.mod.recipe.FryingRecipe;
@@ -83,20 +83,25 @@ public class FryerBlockEntity extends ASidedInventoryEntity implements Tickable,
         }
     };
     
-    public final Supplier<String> oilTypeSupplier = () ->
+    public final Supplier<String> OilTypeSupplier = () ->
     {
         OilType type = getOilType();
         switch(type)
         {
-            case RICE_OIL:
-                return "Rice Oil";
-            case SUNFLOWER_OIL:
-                return "Sunflower Oil";
             case NONE:
                 return "None";
-            default:
-                return "";
+            case SUNFLOWER_OIL:
+                return "Sunflower Oil";
+            case RICE_OIL:
+                return "Rice Oil";
+            default: return "";
         }
+    };
+    public final Supplier<String> OilUsageSupplier = () ->
+    {
+        OilType type = getOilType();
+        if(type == OilType.NONE) return "";
+        return (int) (((float) inverseOilUsage / maxOilUsage) * 100F) + "%";
     };
     //#endregion
     

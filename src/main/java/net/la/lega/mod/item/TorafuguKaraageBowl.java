@@ -19,14 +19,14 @@ public class TorafuguKaraageBowl extends Item
     public static final Identifier ID = new Identifier(LLoader.MOD_ID, "torafugu_karaage_bowl");
     
     public static final StatusEffect speedEffect = StatusEffects.SPEED;
-    public static final int speedEffectDuration = 20 * 35;
+    public static final int speedEffectDuration = 20 * 60;
     public static final float speedEffectChance = 0.325F;
     
     public static final StatusEffect regenEffect = StatusEffects.REGENERATION;
     public static final int regenEffectDuration = 20 * 20;
     public static final float regenEffectChance = 0.785F;
     
-    public static final float saturation = 18F;
+    public static final float saturation = 15F;
     public static final int hunger = 12;
     
     public TorafuguKaraageBowl()

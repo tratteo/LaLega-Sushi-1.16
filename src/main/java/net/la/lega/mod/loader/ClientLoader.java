@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.la.lega.mod.entity_renderer.PressBlockEntityRenderer;
-import net.la.lega.mod.gui.controller.*;
+import net.la.lega.mod.gui.handler.*;
 import net.la.lega.mod.gui.screen.*;
 import net.la.lega.mod.initializer.LBlocks;
 import net.la.lega.mod.initializer.LEntities;

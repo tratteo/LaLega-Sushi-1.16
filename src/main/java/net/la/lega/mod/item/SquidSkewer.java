@@ -20,8 +20,8 @@ public class SquidSkewer extends Item
     
     public static final StatusEffect effect = StatusEffects.LUCK;
     public static final int effectDuration = 20 * 45;
-    public static final float effectChance = 0.115F;
-    public static final float saturation = 1.95F;
+    public static final float effectChance = 0.30F;
+    public static final float saturation = 2F;
     public static final int hunger = 4;
     
     public SquidSkewer()

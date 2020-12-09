@@ -6,7 +6,7 @@ import net.la.lega.mod.api.LimitedQueue;
 import net.la.lega.mod.api.ProcessableRecipeObject;
 import net.la.lega.mod.block.SteamCookerBlock;
 import net.la.lega.mod.entity.abstraction.ASidedInventoryEntity;
-import net.la.lega.mod.gui.controller.SteamCookerBlockGUIHandler;
+import net.la.lega.mod.gui.handler.SteamCookerBlockGUIHandler;
 import net.la.lega.mod.initializer.LEntities;
 import net.la.lega.mod.recipe.SteamCookingRecipe;
 import net.minecraft.block.BlockState;
@@ -28,6 +28,8 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Tickable;
 import net.minecraft.util.math.Direction;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.function.Supplier;
 
 public class SteamCookerBlockEntity extends ASidedInventoryEntity implements PropertyDelegateHolder, Tickable, NamedScreenHandlerFactory, ExtendedScreenHandlerFactory
 {
@@ -99,7 +101,11 @@ public class SteamCookerBlockEntity extends ASidedInventoryEntity implements Pro
             return new int[]{INPUT_SLOT};
         }
     }
-    
+    public final Supplier<String> WaterLevelSupplier = () ->
+    {
+        if(propertyDelegate.get(CURRENT_WATER_LEVEL) == 0) return "";
+        return (int) (((float) inverseWaterLevel / maxWaterLevel) * 100F) + "%";
+    };
     @Override public boolean isValid(int slot, ItemStack stack)
     {
         return slot == INPUT_SLOT;

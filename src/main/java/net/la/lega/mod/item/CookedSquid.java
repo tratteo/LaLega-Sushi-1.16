@@ -4,6 +4,7 @@ import net.la.lega.mod.initializer.LItemGroups;
 import net.la.lega.mod.loader.LLoader;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.util.Identifier;
 
 public class CookedSquid extends Item
