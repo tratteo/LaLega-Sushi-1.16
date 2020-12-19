@@ -71,6 +71,7 @@ public class AvocadoBlock extends CropBlock
         if(!world.isClient)
         {
             world.setBlockState(pos, this.withAge(age > getMaxAge() ? getMaxAge() : age), 0B1011);
+            world.updateComparators(pos, this);
         }
     }
     
@@ -140,7 +141,7 @@ public class AvocadoBlock extends CropBlock
         int i = this.getAge(state);
         if(i < this.getMaxAge())
         {
-            if(random.nextInt((int) 14) == 0)
+            if(random.nextInt((int) 13) == 0)
             {
                 setAgeState(world, pos, i + getGrowthAmount(world));
             }

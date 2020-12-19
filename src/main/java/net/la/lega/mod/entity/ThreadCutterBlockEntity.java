@@ -8,6 +8,7 @@ import net.la.lega.mod.initializer.LEntities;
 import net.la.lega.mod.initializer.LSounds;
 import net.la.lega.mod.recipe.ThreadCuttingRecipe;
 import net.la.lega.mod.recipe.abstraction.AInjectiveProcessingRecipe;
+import net.minecraft.block.entity.ChestBlockEntity;
 import net.minecraft.entity.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;

@@ -168,6 +168,34 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/run"/>
       <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\Matteo\Documents\Projects\Mods\LaLegaSushi-1.16\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=server -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotServer"/>
     </configuration>
+    <component name="ProjectRunConfigurationManager"/>
+    <configuration default="false" factoryName="Application" name="Minecraft Client" type="Application">
+      <module name="LaLegaSushi-1.16.main"/>
+      <option name="MAIN_CLASS_NAME" value="net.fabricmc.devlaunchinjector.Main"/>
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/run"/>
+      <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\Matteo\Documents\Projects\Mods\LaLegaSushi-1.16\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=client -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotClient"/>
+    </configuration>
+    <component name="ProjectRunConfigurationManager"/>
+    <configuration default="false" factoryName="Application" name="Minecraft Server" type="Application">
+      <module name="LaLegaSushi-1.16.main"/>
+      <option name="MAIN_CLASS_NAME" value="net.fabricmc.devlaunchinjector.Main"/>
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/run"/>
+      <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\Matteo\Documents\Projects\Mods\LaLegaSushi-1.16\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=server -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotServer"/>
+    </configuration>
+    <component name="ProjectRunConfigurationManager"/>
+    <configuration default="false" factoryName="Application" name="Minecraft Client" type="Application">
+      <module name="LaLegaSushi-1.16.main"/>
+      <option name="MAIN_CLASS_NAME" value="net.fabricmc.devlaunchinjector.Main"/>
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/run"/>
+      <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\Matteo\Documents\Projects\Mods\LaLegaSushi-1.16\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=client -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotClient"/>
+    </configuration>
+    <component name="ProjectRunConfigurationManager"/>
+    <configuration default="false" factoryName="Application" name="Minecraft Server" type="Application">
+      <module name="LaLegaSushi-1.16.main"/>
+      <option name="MAIN_CLASS_NAME" value="net.fabricmc.devlaunchinjector.Main"/>
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/run"/>
+      <option name="VM_PARAMETERS" value="-Dfabric.dli.config=C:\Users\Matteo\Documents\Projects\Mods\LaLegaSushi-1.16\.gradle\loom-cache\launch.cfg -Dfabric.dli.env=server -Dfabric.dli.main=net.fabricmc.loader.launch.knot.KnotServer"/>
+    </configuration>
   <component name="ProjectRunConfigurationManager"/>
     <configuration default="false" factoryName="Application" name="Minecraft Client" type="Application">
       <module name="LaLegaSushi-1.16.main"/>

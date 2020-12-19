@@ -551,7 +551,9 @@
           <root url="jar://C:/Users/Matteo/.gradle/caches/fabric-loom/1.16.4-mapped-net.fabricmc.yarn-1.16.4+build.7-v2/minecraft-1.16.4-mapped-net.fabricmc.yarn-1.16.4+build.7-v2.jar!/"/>
         </CLASSES>
         <JAVADOC/>
-        <SOURCES/>
+        <SOURCES>
+          <root url="jar://C:/Users/Matteo/.gradle/caches/fabric-loom/1.16.4-mapped-net.fabricmc.yarn-1.16.4+build.7-v2/minecraft-1.16.4-mapped-net.fabricmc.yarn-1.16.4+build.7-v2-sources.jar!/"/>
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
@@ -1145,7 +1147,7 @@
     <orderEntry type="module-library" scope="PROVIDED">
       <library>
         <CLASSES>
-          <root url="jar://C:/Users/Matteo/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loom/0.5-SNAPSHOT/1f6b88d0ef8f96244dd029542cdf6875b895e53c/fabric-loom-0.5-SNAPSHOT.jar!/"/>
+          <root url="jar://C:/Users/Matteo/.gradle/caches/modules-2/files-2.1/net.fabricmc/fabric-loom/0.5-SNAPSHOT/df9379beef12ff4973d97df3777d43639e6b2b03/fabric-loom-0.5-SNAPSHOT.jar!/"/>
         </CLASSES>
         <JAVADOC/>
         <SOURCES/>
