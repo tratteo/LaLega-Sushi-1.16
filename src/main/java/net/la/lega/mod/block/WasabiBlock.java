@@ -65,37 +65,43 @@ public class WasabiBlock extends CropBlock
     }
     
     @Override
-    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random)
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random)
     {
-        if(world.getBaseLightLevel(pos, 0) >= 8)
+        if (world.getBaseLightLevel(pos, 0) >= 9)
         {
             int i = this.getAge(state);
-            if(i < this.getMaxAge())
+            if (i < this.getMaxAge())
             {
-                float f = getAvailableMoisture(this, world, pos);
-                if(random.nextInt((int) (32.0F / f) + 1) == 0)
+                if (random.nextInt((int)(16.0F)) == 0)
                 {
-                    world.setBlockState(pos, this.withAge(i + 1), 2);
+                    setAgeState(world, pos, i + getGrowthAmount(world));
                 }
             }
         }
     }
-    
+    public void setAgeState(World world, BlockPos pos, int age)
+    {
+        if(age < 0) return;
+        if(!world.isClient)
+        {
+            world.setBlockState(pos, this.withAge(age > getMaxAge() ? getMaxAge() : age), 2);
+        }
+    }
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos)
     {
         BlockState blockState = world.getBlockState(pos.down());
-        if (blockState.isOf(Blocks.GRASS_BLOCK) || blockState.isOf(Blocks.DIRT) || blockState.isOf(Blocks.FARMLAND) || blockState.isOf(Blocks.PODZOL))
+        if(blockState.isOf(Blocks.GRASS_BLOCK) || blockState.isOf(Blocks.DIRT) || blockState.isOf(Blocks.FARMLAND) || blockState.isOf(Blocks.PODZOL))
         {
             BlockPos blockPos = pos.down();
             Iterator var6 = Direction.Type.HORIZONTAL.iterator();
-        
+            
             while(var6.hasNext())
             {
-                Direction direction = (Direction)var6.next();
+                Direction direction = (Direction) var6.next();
                 BlockState blockState2 = world.getBlockState(blockPos.offset(direction));
                 FluidState fluidState = world.getFluidState(blockPos.offset(direction));
-                if (fluidState.isIn(FluidTags.WATER) || blockState2.isOf(Blocks.FROSTED_ICE))
+                if(fluidState.isIn(FluidTags.WATER) || blockState2.isOf(Blocks.FROSTED_ICE))
                 {
                     return true;
                 }

@@ -3,6 +3,7 @@ package net.la.lega.mod.block;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.la.lega.mod.block.abstraction.AHorizontalFacingInventoryBlock;
 import net.la.lega.mod.entity.PressBlockEntity;
+import net.la.lega.mod.initializer.LSounds;
 import net.la.lega.mod.loader.LLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -10,6 +11,7 @@ import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.util.ActionResult;
@@ -41,6 +43,12 @@ public class PressBlock extends AHorizontalFacingInventoryBlock
     {
         super.appendProperties(stateManager);
         stateManager.add(MODELS);
+    }
+    
+    @Override public boolean onSyncedBlockEvent(BlockState state, World world, BlockPos pos, int type, int data)
+    {
+        world.playSound((PlayerEntity)null, pos,  LSounds.PRESS_ACTIVATE_SOUNDEVENT, SoundCategory.BLOCKS, 0.25F, 0.9F);
+        return super.onSyncedBlockEvent(state, world, pos, type, data);
     }
     
     @Override

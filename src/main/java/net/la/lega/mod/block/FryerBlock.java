@@ -11,8 +11,10 @@ import net.la.lega.mod.loader.LLoader;
 import net.la.lega.mod.model_enum.OilType;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.ChestBlock;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.ChestBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -49,6 +51,7 @@ public class FryerBlock extends AHorizontalFacingInventoryBlock
     
     public FryerBlock()
     {
+        ChestBlock
         super(FabricBlockSettings.of(Material.METAL).breakByHand((true)).sounds(BlockSoundGroup.METAL).strength(2F, 3F).nonOpaque().build());
         this.setDefaultState(this.stateManager.getDefaultState().with(OIL_TYPE, OilType.NONE).with(ON, false));
     }
@@ -136,7 +139,7 @@ public class FryerBlock extends AHorizontalFacingInventoryBlock
     {
         if(world.getBlockState(pos).get(ON))
         {
-            if(random.nextDouble() < 0.45D)
+            if(random.nextDouble() < 0.6D)
             {
                 double x = (double) pos.getX() + 0.3D + (random.nextDouble() * 0.375D);
                 double y = (double) pos.getY() + 0.95D;
@@ -144,9 +147,9 @@ public class FryerBlock extends AHorizontalFacingInventoryBlock
                 double vy = random.nextDouble() * 0.1D;
                 world.addParticle(ParticleTypes.SMOKE, x, y, z, 0.0D, vy, 0.0D);
             }
-            if(random.nextDouble() < 0.14D)
+            if(random.nextDouble() < 0.1D)
             {
-                world.playSound(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, LSounds.FRYER_ON_SOUNDEVENT, SoundCategory.BLOCKS, 0.25F, 0.825F, false);
+                world.playSound(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, LSounds.FRYER_ON_SOUNDEVENT, SoundCategory.BLOCKS, 0.15F, world.random.nextFloat() * 0.1F + 0.75F, false);
             }
         }
     }

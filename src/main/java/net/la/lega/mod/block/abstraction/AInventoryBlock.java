@@ -22,9 +22,9 @@ public abstract class AInventoryBlock extends BlockWithEntity
     
     public abstract BlockEntity createBlockEntity(BlockView view);
     
-    public void onBlockRemoved(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved)
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved)
     {
-        if(state.getBlock() != newState.getBlock())
+        if(!state.isOf(newState.getBlock()))
         {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if(blockEntity instanceof ASidedInventoryEntity || blockEntity instanceof AInventoryEntity)
@@ -32,6 +32,7 @@ public abstract class AInventoryBlock extends BlockWithEntity
                 ItemScatterer.spawn(world, pos, (Inventory) (blockEntity));
                 world.updateComparators(pos, this);
             }
+            
             super.onStateReplaced(state, world, pos, newState, moved);
         }
     }

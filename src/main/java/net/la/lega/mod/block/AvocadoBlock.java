@@ -70,7 +70,7 @@ public class AvocadoBlock extends CropBlock
         if(age < 0) return;
         if(!world.isClient)
         {
-            world.setBlockState(pos, this.withAge(age > getMaxAge() ? getMaxAge() : age), 0B1011);
+            world.setBlockState(pos, this.withAge(age > getMaxAge() ? getMaxAge() : age), 2);
             world.updateComparators(pos, this);
         }
     }
@@ -135,13 +135,12 @@ public class AvocadoBlock extends CropBlock
     }
     
     @Override
-    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random)
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random)
     {
-        super.scheduledTick(state, world, pos, random);
         int i = this.getAge(state);
         if(i < this.getMaxAge())
         {
-            if(random.nextInt((int) 13) == 0)
+            if(random.nextInt(8) == 0)
             {
                 setAgeState(world, pos, i + getGrowthAmount(world));
             }

@@ -57,19 +57,25 @@ public class RiceBlock extends CropBlock
     {
         return 1;
     }
-    
-    @Override
-    public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random)
+    public void setAgeState(World world, BlockPos pos, int age)
     {
-        if(world.getBaseLightLevel(pos, 0) >= 8)
+        if(age < 0) return;
+        if(!world.isClient)
+        {
+            world.setBlockState(pos, this.withAge(age > getMaxAge() ? getMaxAge() : age), 2);
+        }
+    }
+    @Override
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random)
+    {
+        if (world.getBaseLightLevel(pos, 0) >= 9)
         {
             int i = this.getAge(state);
-            if(i < this.getMaxAge())
+            if (i < this.getMaxAge())
             {
-                float f = getAvailableMoisture(this, world, pos);
-                if(random.nextInt((int) (20.0F / f) + 1) == 0)
+                if (random.nextInt((int)(14.0F)) == 0)
                 {
-                    world.setBlockState(pos, this.withAge(i + getGrowthAmount(world)), 2);
+                    setAgeState(world, pos, i + getGrowthAmount(world));
                 }
             }
         }

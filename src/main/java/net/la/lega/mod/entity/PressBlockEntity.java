@@ -39,7 +39,7 @@ public class PressBlockEntity extends AProcessingEntity implements NamedScreenHa
     private boolean soundPlaying = false;
     private int delay = 15;
     private int currentDelay;
-    
+
     public PressBlockEntity()
     {
         super(LEntities.PRESS_BLOCK_ENTITY, 3);
@@ -178,20 +178,17 @@ public class PressBlockEntity extends AProcessingEntity implements NamedScreenHa
             }
             sync();
         }
-        else if(world.isClient)
+        if(getCurrentUnitProcessingTime() != 0)
         {
-            if(getCurrentUnitProcessingTime() != 0)
+            if(!soundPlaying)
             {
-                if(!soundPlaying)
-                {
-                    world.playSound(pos.getX() + 1D, pos.getY() + 1, pos.getZ() + 1, LSounds.PRESS_ACTIVATE_SOUNDEVENT, SoundCategory.BLOCKS, 0.25F, 0.9F, false);
-                    soundPlaying = true;
-                }
+                this.world.playSound(null, pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, LSounds.PRESS_ACTIVATE_SOUNDEVENT, SoundCategory.BLOCKS, 0.25F, this.world.random.nextFloat() * 0.1F + 0.8F);
+                soundPlaying = true;
             }
-            else
-            {
-                soundPlaying = false;
-            }
+        }
+        else
+        {
+            soundPlaying = false;
         }
     }
     
