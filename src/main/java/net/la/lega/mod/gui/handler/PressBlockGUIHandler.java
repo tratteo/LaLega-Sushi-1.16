@@ -7,7 +7,7 @@ import io.github.cottonmc.cotton.gui.widget.WPlainPanel;
 import io.github.cottonmc.cotton.gui.widget.WPlayerInvPanel;
 import net.la.lega.mod.entity.PressBlockEntity;
 import net.la.lega.mod.entity.abstraction.AProcessingEntity;
-import net.la.lega.mod.initializer.LUIControllers;
+import net.la.lega.mod.initializer.LGUIHandlers;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.util.Identifier;
@@ -18,7 +18,7 @@ public class PressBlockGUIHandler extends SyncedGuiDescription
     
     public PressBlockGUIHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context)
     {
-        super(LUIControllers.PRESS_SCREEN_HANDLER, syncId, playerInventory, getBlockInventory(context, 3), getBlockPropertyDelegate(context, AProcessingEntity.PROPERTY_SIZE));
+        super(LGUIHandlers.PRESS_SCREEN_HANDLER, syncId, playerInventory, getBlockInventory(context, 3), getBlockPropertyDelegate(context, AProcessingEntity.PROPERTY_SIZE));
         
         initializeBufferEntity(context);
         WPlainPanel root = new WPlainPanel();

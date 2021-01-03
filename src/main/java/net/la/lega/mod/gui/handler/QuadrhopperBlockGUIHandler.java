@@ -3,7 +3,7 @@ package net.la.lega.mod.gui.handler;
 import io.github.cottonmc.cotton.gui.SyncedGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.WItemSlot;
 import io.github.cottonmc.cotton.gui.widget.WPlainPanel;
-import net.la.lega.mod.initializer.LUIControllers;
+import net.la.lega.mod.initializer.LGUIHandlers;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandlerContext;
 
@@ -15,7 +15,7 @@ public class QuadrhopperBlockGUIHandler extends SyncedGuiDescription
     
     public QuadrhopperBlockGUIHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context)
     {
-        super(LUIControllers.QUADRHOPPER_SCREEN_HANDLER, syncId, playerInventory, getBlockInventory(context, 4), getBlockPropertyDelegate(context));
+        super(LGUIHandlers.QUADRHOPPER_SCREEN_HANDLER, syncId, playerInventory, getBlockInventory(context, 4), getBlockPropertyDelegate(context));
         WPlainPanel root = new WPlainPanel();
         root.setSize(168, 80);
         setRootPanel(root);

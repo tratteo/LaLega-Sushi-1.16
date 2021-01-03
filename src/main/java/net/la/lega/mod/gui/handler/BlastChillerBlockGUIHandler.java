@@ -5,7 +5,7 @@ import io.github.cottonmc.cotton.gui.widget.WBar;
 import io.github.cottonmc.cotton.gui.widget.WItemSlot;
 import io.github.cottonmc.cotton.gui.widget.WPlainPanel;
 import net.la.lega.mod.entity.abstraction.AProcessingEntity;
-import net.la.lega.mod.initializer.LUIControllers;
+import net.la.lega.mod.initializer.LGUIHandlers;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.util.Identifier;
@@ -14,7 +14,7 @@ public class BlastChillerBlockGUIHandler extends SyncedGuiDescription
 {
     public BlastChillerBlockGUIHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context)
     {
-        super(LUIControllers.BLASTCHILLER_SCREEN_HANDLER, syncId, playerInventory, getBlockInventory(context, 2), getBlockPropertyDelegate(context, AProcessingEntity.PROPERTY_SIZE));
+        super(LGUIHandlers.BLASTCHILLER_SCREEN_HANDLER, syncId, playerInventory, getBlockInventory(context, 2), getBlockPropertyDelegate(context, AProcessingEntity.PROPERTY_SIZE));
         
         WPlainPanel root = new WPlainPanel();
         root.setSize(158, 140);

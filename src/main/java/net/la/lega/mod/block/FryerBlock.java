@@ -51,7 +51,6 @@ public class FryerBlock extends AHorizontalFacingInventoryBlock
     
     public FryerBlock()
     {
-        ChestBlock
         super(FabricBlockSettings.of(Material.METAL).breakByHand((true)).sounds(BlockSoundGroup.METAL).strength(2F, 3F).nonOpaque().build());
         this.setDefaultState(this.stateManager.getDefaultState().with(OIL_TYPE, OilType.NONE).with(ON, false));
     }

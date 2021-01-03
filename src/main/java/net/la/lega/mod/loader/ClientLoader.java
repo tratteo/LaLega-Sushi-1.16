@@ -9,7 +9,7 @@ import net.la.lega.mod.gui.handler.*;
 import net.la.lega.mod.gui.screen.*;
 import net.la.lega.mod.initializer.LBlocks;
 import net.la.lega.mod.initializer.LEntities;
-import net.la.lega.mod.initializer.LUIControllers;
+import net.la.lega.mod.initializer.LGUIHandlers;
 import net.minecraft.client.render.RenderLayer;
 
 public final class ClientLoader implements ClientModInitializer
@@ -30,13 +30,13 @@ public final class ClientLoader implements ClientModInitializer
     private void initializeScreens()
     {
         
-        ScreenRegistry.<PressBlockGUIHandler, PressBlockScreen>register(LUIControllers.PRESS_SCREEN_HANDLER, (gui, inventory, title) -> new PressBlockScreen(gui, inventory.player, title));
-        ScreenRegistry.<BlastChillerBlockGUIHandler, BlastChillerBlockScreen>register(LUIControllers.BLASTCHILLER_SCREEN_HANDLER, (gui, inventory, title) -> new BlastChillerBlockScreen(gui, inventory.player, title));
-        ScreenRegistry.<FryerBlockGUIHandler, FryerBlockScreen>register(LUIControllers.FRYER_SCREEN_HANDLER, (gui, inventory, title) -> new FryerBlockScreen(gui, inventory.player, title));
-        ScreenRegistry.<SushiCrafterBlockGUIHandler, SushiCrafterBlockScreen>register(LUIControllers.SUSHICRAFTER_SCREEN_HANDLER, (gui, inventory, title) -> new SushiCrafterBlockScreen(gui, inventory.player, title));
-        ScreenRegistry.<QuadrhopperBlockGUIHandler, QuadrhopperBlockScreen>register(LUIControllers.QUADRHOPPER_SCREEN_HANDLER, (gui, inventory, title) -> new QuadrhopperBlockScreen(gui, inventory.player, title));
-        ScreenRegistry.<SteamCookerBlockGUIHandler, SteamCookerBlockScreen>register(LUIControllers.STEAMCOOKER_SCREEN_HANDLER, (gui, inventory, title) -> new SteamCookerBlockScreen(gui, inventory.player, title));
-        ScreenRegistry.<ThreadCutterBlockGUIHandler, ThreadCutterBlockScreen>register(LUIControllers.THREAD_CUTTER_SCREEN_HANDLER, (gui, inventory, title) -> new ThreadCutterBlockScreen(gui, inventory.player, title));
+        ScreenRegistry.<PressBlockGUIHandler, PressBlockScreen>register(LGUIHandlers.PRESS_SCREEN_HANDLER, (gui, inventory, title) -> new PressBlockScreen(gui, inventory.player, title));
+        ScreenRegistry.<BlastChillerBlockGUIHandler, BlastChillerBlockScreen>register(LGUIHandlers.BLASTCHILLER_SCREEN_HANDLER, (gui, inventory, title) -> new BlastChillerBlockScreen(gui, inventory.player, title));
+        ScreenRegistry.<FryerBlockGUIHandler, FryerBlockScreen>register(LGUIHandlers.FRYER_SCREEN_HANDLER, (gui, inventory, title) -> new FryerBlockScreen(gui, inventory.player, title));
+        ScreenRegistry.<SushiCrafterBlockGUIHandler, SushiCrafterBlockScreen>register(LGUIHandlers.SUSHICRAFTER_SCREEN_HANDLER, (gui, inventory, title) -> new SushiCrafterBlockScreen(gui, inventory.player, title));
+        ScreenRegistry.<QuadrhopperBlockGUIHandler, QuadrhopperBlockScreen>register(LGUIHandlers.QUADRHOPPER_SCREEN_HANDLER, (gui, inventory, title) -> new QuadrhopperBlockScreen(gui, inventory.player, title));
+        ScreenRegistry.<SteamCookerBlockGUIHandler, SteamCookerBlockScreen>register(LGUIHandlers.STEAMCOOKER_SCREEN_HANDLER, (gui, inventory, title) -> new SteamCookerBlockScreen(gui, inventory.player, title));
+        ScreenRegistry.<ThreadCutterBlockGUIHandler, ThreadCutterBlockScreen>register(LGUIHandlers.THREAD_CUTTER_SCREEN_HANDLER, (gui, inventory, title) -> new ThreadCutterBlockScreen(gui, inventory.player, title));
     }
     
     private void setBlocksRenderLayer()

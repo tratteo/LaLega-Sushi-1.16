@@ -15,7 +15,7 @@ public final class LLoader implements ModInitializer
         LItems.initialize();
         LEntities.initialize();
         LVillagerProfessions.initialize();
-        LUIControllers.initialize();
+        LGUIHandlers.initialize();
         LRecipes.initialize();
         LSounds.initialize();
         LTags.intialize();

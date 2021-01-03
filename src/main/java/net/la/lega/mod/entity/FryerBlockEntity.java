@@ -13,6 +13,7 @@ import net.la.lega.mod.recipe.FryingRecipe;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -101,7 +102,9 @@ public class FryerBlockEntity extends ASidedInventoryEntity implements Tickable,
     {
         OilType type = getOilType();
         if(type == OilType.NONE) return "";
-        return (int) (((float) inverseOilUsage / maxOilUsage) * 100F) + "%";
+        int val = (int) (((float) inverseOilUsage / maxOilUsage) * 100F);
+        val = val < 0 ? 0 : val;
+        return  val + "%";
     };
     //#endregion
     
@@ -348,6 +351,7 @@ public class FryerBlockEntity extends ASidedInventoryEntity implements Tickable,
         processingStack.setCount(0);
         processingBatch.clear();
         tag.putInt("oilUsage", currentOilUsage);
+        
         return super.toTag(tag);
     }
     

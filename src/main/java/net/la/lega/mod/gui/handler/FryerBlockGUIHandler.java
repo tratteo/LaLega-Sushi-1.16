@@ -4,7 +4,7 @@ import io.github.cottonmc.cotton.gui.SyncedGuiDescription;
 import io.github.cottonmc.cotton.gui.widget.*;
 import io.github.cottonmc.cotton.gui.widget.data.HorizontalAlignment;
 import net.la.lega.mod.entity.FryerBlockEntity;
-import net.la.lega.mod.initializer.LUIControllers;
+import net.la.lega.mod.initializer.LGUIHandlers;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.util.Identifier;
@@ -15,7 +15,7 @@ public class FryerBlockGUIHandler extends SyncedGuiDescription
     
     public FryerBlockGUIHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context)
     {
-        super(LUIControllers.FRYER_SCREEN_HANDLER, syncId, playerInventory, getBlockInventory(context, 3), getBlockPropertyDelegate(context, 2));
+        super(LGUIHandlers.FRYER_SCREEN_HANDLER, syncId, playerInventory, getBlockInventory(context, 3), getBlockPropertyDelegate(context, 2));
         
         WPlainPanel root = new WPlainPanel();
         setRootPanel(root);

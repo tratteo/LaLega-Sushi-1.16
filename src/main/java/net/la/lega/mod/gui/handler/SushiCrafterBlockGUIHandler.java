@@ -7,7 +7,7 @@ import io.github.cottonmc.cotton.gui.widget.WPlainPanel;
 import io.github.cottonmc.cotton.gui.widget.WSprite;
 import net.la.lega.mod.entity.SushiCrafterBlockEntity;
 import net.la.lega.mod.entity.abstraction.AProcessingEntity;
-import net.la.lega.mod.initializer.LUIControllers;
+import net.la.lega.mod.initializer.LGUIHandlers;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.util.Identifier;
@@ -19,7 +19,7 @@ public class SushiCrafterBlockGUIHandler extends SyncedGuiDescription
 {
     public SushiCrafterBlockGUIHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context)
     {
-        super(LUIControllers.SUSHICRAFTER_SCREEN_HANDLER, syncId, playerInventory, getBlockInventory(context, 13), getBlockPropertyDelegate(context, AProcessingEntity.PROPERTY_SIZE));
+        super(LGUIHandlers.SUSHICRAFTER_SCREEN_HANDLER, syncId, playerInventory, getBlockInventory(context, 13), getBlockPropertyDelegate(context, AProcessingEntity.PROPERTY_SIZE));
         WPlainPanel root = new WPlainPanel();
         setRootPanel(root);
         
