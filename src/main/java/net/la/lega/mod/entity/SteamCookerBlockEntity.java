@@ -103,6 +103,7 @@ public class SteamCookerBlockEntity extends ASidedInventoryEntity implements Pro
     }
     public final Supplier<String> WaterLevelSupplier = () ->
     {
+        if(world.getBlockState(pos).isAir()) return "";
         if(propertyDelegate.get(CURRENT_WATER_LEVEL) == 0) return "";
         return (int) (((float) inverseWaterLevel / maxWaterLevel) * 100F) + "%";
     };
@@ -230,6 +231,7 @@ public class SteamCookerBlockEntity extends ASidedInventoryEntity implements Pro
     
     public int getWaterFillLevel()
     {
+        if(world.getBlockState(pos).isAir()) return 0;
         return this.world.getBlockState(this.pos).get(SteamCookerBlock.WATER_FILL_LEVEL);
     }
     

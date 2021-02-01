@@ -13,7 +13,6 @@ import net.la.lega.mod.recipe.FryingRecipe;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -86,7 +85,9 @@ public class FryerBlockEntity extends ASidedInventoryEntity implements Tickable,
     
     public final Supplier<String> OilTypeSupplier = () ->
     {
-        OilType type = getOilType();
+        if((world.getBlockState(pos).isAir())) return "";
+        
+        OilType type =  this.world.getBlockState(pos).get(FryerBlock.OIL_TYPE);
         switch(type)
         {
             case NONE:
@@ -317,6 +318,7 @@ public class FryerBlockEntity extends ASidedInventoryEntity implements Tickable,
     
     public OilType getOilType()
     {
+        if(world.getBlockState(pos).isAir()) return OilType.NONE;
         return this.world.getBlockState(pos).get(FryerBlock.OIL_TYPE);
     }
     
